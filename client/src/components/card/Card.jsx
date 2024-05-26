@@ -1,5 +1,4 @@
 import "./card.css"
-import { posts } from "../../data";
 import Heart from "../../img/heart.svg";
 import HeartFilled from "../../img/heartFilled.svg"
 import Comment from "../../img/comment.svg";
@@ -9,8 +8,9 @@ import { useState } from "react";
 
 const Card = ({ post, socket, user }) => {
     const [liked, setLiked] = useState(false);
+    
     const handleNotification = (type) => {
-        setLiked(true);
+        type === 1 && setLiked(true);
         socket.emit("sendNotification", {
             senderName: user,
             receiverName: post.username,

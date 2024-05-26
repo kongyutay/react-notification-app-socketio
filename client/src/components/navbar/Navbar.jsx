@@ -1,8 +1,8 @@
-import "./navbar.css"
-import Notification from "../../img/notification.svg"
-import Message from "../../img/message.svg"
-import Settings from "../../img/settings.svg"
-import { useEffect, useState } from "react"
+import "./navbar.css";
+import Notification from "../../img/notification.svg";
+import Message from "../../img/message.svg";
+import Settings from "../../img/settings.svg";
+import { useEffect, useState } from "react";
 
 const Navbar = ({socket}) => {
     const [notifications, setNotifications] = useState([]);
